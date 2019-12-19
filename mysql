@@ -1,0 +1,4 @@
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password';
+CREATE DATABASE dbname;
+CREATE TABLE users( id serial PRIMARY KEY, email VARCHAR(50) unique, password VARCHAR(50), name VARCHAR(50) unique, task int[], comm bool, worbef bool, skills bool, knowledge bool);
+CREATE TABLE tasks( id INT PRIMARY KEY AUTO_INCREMENT NOT NULL, name VARCHAR(50) unique, user int, state VARCHAR(50));
